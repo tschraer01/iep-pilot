@@ -1,14 +1,11 @@
 import { type NextRequest, NextResponse } from 'next/server'
-import { updateSession } from '@supabase/auth-helpers-nextjs'
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
+  const response = NextResponse.next({
     request: {
       headers: request.headers,
     },
   })
-
-  response = await updateSession(request, response)
 
   // Protect dashboard routes
   if (request.nextUrl.pathname.startsWith('/dashboard')) {
