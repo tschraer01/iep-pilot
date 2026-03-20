@@ -1,0 +1,60 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "projectSettings": {
+    "rootDirectory": ".",
+    "outputDirectory": ".next"
+  },
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_URL",
+      "description": "Supabase project URL",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "description": "Supabase anonymous key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "SUPABASE_SERVICE_ROLE_KEY",
+      "description": "Supabase service role key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "STRIPE_SECRET_KEY",
+      "description": "Stripe secret key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+      "description": "Stripe publishable key",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "STRIPE_WEBHOOK_SECRET",
+      "description": "Stripe webhook secret",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "NEXT_PUBLIC_APP_URL",
+      "description": "Application URL",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "ANTHROPIC_API_KEY",
+      "description": "Anthropic API key for Claude AI",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

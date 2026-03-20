@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vercel --version)",
+      "Bash(git --version)",
+      "Bash(git config:*)",
+      "Bash(vercel whoami:*)",
+      "Read(//c/Users/Tom AI/**)"
+    ]
+  }
+}
