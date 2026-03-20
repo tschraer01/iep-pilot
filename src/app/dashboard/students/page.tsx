@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import Link from 'next/link'
 import { Plus, Edit2, Trash2 } from 'lucide-react'
 
