@@ -2,32 +2,31 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Mail, Lock, LogIn } from 'lucide-react'
+import { createClient } from '@/lib/supabase/client'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     setError('')
 
-    try {
-      // Implement Supabase login here
-      // const { error } = await supabase.auth.signInWithPassword({
-      //   email,
-      //   password,
-      // })
-      // if (error) setError(error.message)
-      // else redirect('/dashboard')
-      console.log('Login attempt:', { email, password })
-    } catch (err) {
-      setError('An error occurred. Please try again.')
-    } finally {
+    const supabase = createClient()
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+
+    if (error) {
+      setError(error.message)
       setIsLoading(false)
+    } else {
+      router.push('/dashboard')
+      router.refresh()
     }
   }
 
