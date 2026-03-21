@@ -1,7 +1,7 @@
 {
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
+  "installCommand": "npx npm@10 install",
   "framework": "nextjs",
   "projectSettings": {
     "rootDirectory": ".",
